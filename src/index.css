@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-horizontal-scrolling-menu--wrapper {
+  max-width: max-content;
+}
+.react-horizontal-scrolling-menu--arrow-left, .react-horizontal-scrolling-menu--arrow-right {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 12px;
+}
