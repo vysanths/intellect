@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
 import RightArrow from "./RightArrow";
-import ArrowIcon from "../assets/arrow.svg?react";
 
 // Mock VisibilityContext
 const mockVisibilityContext = {
@@ -18,7 +17,8 @@ describe("RightArrow Component", () => {
 
   it("renders the RightArrow component", () => {
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <RightArrow />
       </VisibilityContext.Provider>
     );
@@ -31,7 +31,8 @@ describe("RightArrow Component", () => {
     mockVisibilityContext.useIsVisible.mockReturnValue(true);
 
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <RightArrow />
       </VisibilityContext.Provider>
     );
@@ -44,7 +45,8 @@ describe("RightArrow Component", () => {
     mockVisibilityContext.useIsVisible.mockReturnValue(false);
 
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <RightArrow />
       </VisibilityContext.Provider>
     );
@@ -57,7 +59,8 @@ describe("RightArrow Component", () => {
     mockVisibilityContext.useIsVisible.mockReturnValue(false);
 
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <RightArrow />
       </VisibilityContext.Provider>
     );

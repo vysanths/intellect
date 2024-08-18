@@ -20,7 +20,7 @@ const AvailbleTimeSlots: FC<Props> = ({ selectedSlot, onCick, selectedTime }) =>
             <div
               key={index}
               className={`p-3 border border-solid border-gray-300 shadow max-w-max rounded-lg cursor-pointer ${
-                selectedTime === displayTime ? "bg-gray-500" : "bg-white"
+                selectedTime === displayTime ? "bg-[#eaeff3]" : "bg-white"
               }`}
               onClick={() => onCick(displayTime)}
             >

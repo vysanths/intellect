@@ -12,7 +12,8 @@ const mockVisibilityContext = {
 describe("LeftArrow Component", () => {
   it("renders the LeftArrow component", () => {
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <LeftArrow />
       </VisibilityContext.Provider>
     );
@@ -25,8 +26,10 @@ describe("LeftArrow Component", () => {
   it("disables the arrow when the first item is visible", () => {
     mockVisibilityContext.useIsVisible.mockReturnValue(true);
 
+    
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <LeftArrow />
       </VisibilityContext.Provider>
     );
@@ -39,7 +42,8 @@ describe("LeftArrow Component", () => {
     mockVisibilityContext.useIsVisible.mockReturnValue(false);
 
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <LeftArrow />
       </VisibilityContext.Provider>
     );
@@ -52,7 +56,8 @@ describe("LeftArrow Component", () => {
     mockVisibilityContext.useIsVisible.mockReturnValue(false);
 
     render(
-      <VisibilityContext.Provider value={mockVisibilityContext}>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      <VisibilityContext.Provider value={mockVisibilityContext as any}>
         <LeftArrow />
       </VisibilityContext.Provider>
     );

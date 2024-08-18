@@ -33,7 +33,7 @@ const DayPicker: FC<Props> = ({ onClick, selectedSlot }) => {
   }, []);
 
   return (
-    <div ref={ref} className="flex flex-col">
+    <div ref={ref} className="flex flex-col w-full">
       <OnScreenContext.Provider value={isVisible}>
         {/* scroll menu for handling the horizontal scrolling */}
         <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>

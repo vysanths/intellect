@@ -43,7 +43,7 @@ describe("AvailbleSlots Component", () => {
 
     // Check if the selected time slot has the correct background color
     const selectedSlot = screen.getByText("09:00 AM");
-    expect(selectedSlot).toHaveClass("bg-gray-500");
+    expect(selectedSlot).toHaveClass("bg-[#eaeff3]");
   });
 
   it("does not highlight non-selected time slots", () => {

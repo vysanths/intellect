@@ -30,7 +30,7 @@ describe("DayCard Component", () => {
 
     const dayCardElement = screen.getByText(dayjs(mockSlot.displayDate).format("DD")).closest("div");
 
-    expect(dayCardElement).toHaveClass("bg-gray-500");
+    expect(dayCardElement).toHaveClass("bg-[#eaeff3]");
   });
 
   it("applies the correct background color when the date is not selected", () => {
