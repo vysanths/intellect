@@ -2,14 +2,14 @@ import { FC } from "react";
 import { GroupedSlot } from "../../interfaces/slots.interface";
 
 type Props = {
-  onCick: (selectedTime: string) => void;
+  onClick: (selectedTime: string) => void;
   selectedTime: string | null
   selectedSlot: GroupedSlot | null;
 };
 
 // component for showing all the available time for a selected day
 
-const AvailbleTimeSlots: FC<Props> = ({ selectedSlot, onCick, selectedTime }) => {
+const AvailbleTimeSlots: FC<Props> = ({ selectedSlot, onClick, selectedTime }) => {
   return (
     <div className="flex flex-col mt-7">
       <h2 className="font-bold">Availble time slots</h2>
@@ -22,7 +22,7 @@ const AvailbleTimeSlots: FC<Props> = ({ selectedSlot, onCick, selectedTime }) =>
               className={`p-3 border border-solid border-gray-300 shadow max-w-max rounded-lg cursor-pointer ${
                 selectedTime === displayTime ? "bg-[#eaeff3]" : "bg-white"
               }`}
-              onClick={() => onCick(displayTime)}
+              onClick={() => onClick(displayTime)}
             >
               {displayTime}
             </div>

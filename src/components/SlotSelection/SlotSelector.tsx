@@ -18,7 +18,7 @@ const SlotSelector: FC = () => {
       />
       <AvailbleTimeSlots
         selectedSlot={selectedSlot}
-        onCick={(selectedTime) => setSeletedTime(selectedTime)}
+        onClick={(selectedTime) => setSeletedTime(selectedTime)}
         selectedTime={selectedTime}
       />
       {selectedTime ? (

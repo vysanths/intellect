@@ -21,7 +21,7 @@ describe("AvailbleSlots Component", () => {
     render(
       <AvailbleTimeSlots
         selectedSlot={mockSlots}
-        onCick={mockOnClick} // Note: Prop name should be onClick
+        onClick={mockOnClick}
         selectedTime={null}
       />
     );
@@ -36,7 +36,7 @@ describe("AvailbleSlots Component", () => {
     render(
       <AvailbleTimeSlots
         selectedSlot={mockSlots}
-        onCick={mockOnClick}
+        onClick={mockOnClick}
         selectedTime="09:00 AM"
       />
     );
@@ -50,7 +50,7 @@ describe("AvailbleSlots Component", () => {
     render(
       <AvailbleTimeSlots
         selectedSlot={mockSlots}
-        onCick={mockOnClick}
+        onClick={mockOnClick}
         selectedTime="09:00 AM"
       />
     );
@@ -66,7 +66,7 @@ describe("AvailbleSlots Component", () => {
     render(
       <AvailbleTimeSlots
         selectedSlot={mockSlots}
-        onCick={mockOnClick}
+        onClick={mockOnClick}
         selectedTime={null}
       />
     );
@@ -82,7 +82,7 @@ describe("AvailbleSlots Component", () => {
     render(
       <AvailbleTimeSlots
         selectedSlot={{displayDate: '', slots: []}}
-        onCick={mockOnClick}
+        onClick={mockOnClick}
         selectedTime={null}
       />
     );
